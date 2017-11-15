@@ -28,6 +28,8 @@
     
     <% @post.images.each do |image| %>
       <%= image_tag image.url %>
+      <%= form.label :remove_image %>
+      <%= form.check_box :remove_image %> 
      <% end %>
   </div>
 

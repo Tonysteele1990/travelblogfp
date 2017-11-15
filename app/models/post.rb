@@ -6,4 +6,6 @@ class Post < ApplicationRecord
 
 	mount_uploaders :images, ImagesUploader
 	serialize :images, JSON
+
+
 end
