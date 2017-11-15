@@ -25,9 +25,10 @@
     <%= form.text_area :blog_entry, placeholder: "Tell Us Something...", class: "form-control" %>
     <%= form.label :images %><br>
     <%= form.file_field :images, id: :post_images, multiple: true %><br>
-    <% if form.object.images? %>
-      <%= image_tag @post.images_urls %>
-    <% end %>
+    
+    <% @post.images.each do |image| %>
+      <%= image_tag image.url %>
+     <% end %>
   </div>
 
 
